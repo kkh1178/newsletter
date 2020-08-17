@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+        />
+        <!-- Standard Meta -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        />
+        <link href="style.css" rel="stylesheet">
+        <!-- <script src="assets/library/jquery.min.js"></script> -->
+        <!-- <script src="../dist/components/form.js"></script>
+        <script src="../dist/components/transition.js"></script> -->
+        
+
+        <script>
+            $(document).ready(function () {
+                $(".ui.form").form({
+                    fields: {
+                        email: {
+                            identifier: "email",
+                            rules: [
+                                {
+                                    type: "empty",
+                                    prompt: "Please enter your e-mail",
+                                },
+                                {
+                                    type: "email",
+                                    prompt: "Please enter a valid e-mail",
+                                },
+                            ],
+                        },
+                        firstname: {
+                            identifier: "firstname",
+                            rules: [
+                                {
+                                    type: "empty",
+                                    prompt: "Please enter your first name",
+                                },
+                                {
+                                    type: "firstname",
+                                    prompt:
+                                        "Please enter your first name",
+                                },
+                            ],
+                        },
+                        lastname: {
+                            identifier: "lastname",
+                            rules: [
+                                {
+                                    type: "empty",
+                                    prompt: "Please enter your last name",
+                                },
+                                {
+                                    type: "firstname",
+                                    prompt:
+                                        "Please enter your last name",
+                                },
+                            ],
+                        },
+                    },
+                });
+            });
+        </script>
+        <title>Newsletter Signup</title>
+    </head>
+    <body>
+        <div class="ui middle aligned center aligned grid">
+            <div class="column">
+                <h2 class="ui blue image header">
+                    <!-- <img src="assets/images/logo.png" class="image" /> -->
+                    <div class="content">
+                        Signup for Our Newsletter!
+                    </div>
+                </h2>
+                <form action="/" class="ui large form" method="POST">
+                    <div class="ui stacked segment">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input
+                                    type="text"
+                                    name="firstname"
+                                    placeholder="First name"
+                                />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input
+                                    type="text"
+                                    name="lastname"
+                                    placeholder="Last name"
+                                />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input
+                                    type="text"
+                                    name="email"
+                                    placeholder="E-mail address"
+                                />
+                            </div>
+                        </div>
+                        <button class="ui fluid large blue submit button" type="submit">
+                            Sign me up!
+                        </button>
+                    </div>
+
+                    <div class="ui error message"></div>
+                </form>
+
+                <!-- <div class="ui message">New to us? <a href="#">Sign Up</a></div> -->
+            </div>
+        </div>
+    </body>
+</html>
